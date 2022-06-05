@@ -15,7 +15,6 @@ import java.util.Arrays;
 // m == matrix.length
 // n == matrix[0].length
 // 1 <= m, n <= 200
-// -231 <= matrix[i][j] <= 231 - 1
 
 class setmatrixzeroes {
     public static void main(String[] args) {
