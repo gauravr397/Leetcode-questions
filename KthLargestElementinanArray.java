@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.PriorityQueue;
 
 public class KthLargestElementinanArray {
     public static void main(String[] args) {
@@ -10,8 +11,20 @@ public class KthLargestElementinanArray {
 
     public int findKthLargest(int[] nums, int k) {
 
-        // Brute force
-        Arrays.sort(nums);
-        return nums[nums.length - k];
+        // Brute force o(nlogn)
+        // Arrays.sort(nums);
+        // return nums[nums.length - k];
+
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
+        for (int i = 0; i < k; i++) {
+            pq.add(nums[i]);
+        }
+        for (int i = k; i < nums.length; I++) {
+            if (pq.peek() < nums[i]) {
+                pq.poll();
+                pq.add(nums[i]);
+            }
+        }
+        return pq.peek();
     }
 }
