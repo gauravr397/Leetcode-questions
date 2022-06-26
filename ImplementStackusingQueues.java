@@ -11,7 +11,7 @@ public class ImplementStackusingQueues {
     }
 
     public void push(int x) {
-        q1.add(x);
+        q2.add(x);
         while (!q1.isEmpty()) {
             q2.add(q1.poll());
             q2.remove();
