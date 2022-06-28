@@ -1,2 +1,3 @@
- // Arrays.sort(nums);
-        // return nums[nums.length - k];
+for(char c :s.toCharArray()){
+        //     count[c-'a']++;
+        // }
