@@ -29,12 +29,12 @@ class Solution {
     } 
     
     public ListNode reverse(ListNode head){
-        ListNode curr=head,prev=null;
-        while(curr!=null){
-        ListNode temp=curr.next;
-        curr.next=prev;
-        prev=curr;
-        curr=temp;
+        ListNode prev=null;
+        while(head!=null){
+        ListNode temp=head.next;
+        head.next=prev;
+        prev=head;
+        head=temp;
         }
         return prev;
     }
