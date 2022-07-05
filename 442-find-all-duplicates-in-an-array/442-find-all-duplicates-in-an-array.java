@@ -18,10 +18,9 @@ class Solution {
         while(i<(nums.length-1)){
             if(nums[i] == nums[i+1]){
                 res.add(nums[i]);
-                i++;
-            }else{
-                i++;
+                
             }
+            i++;
         }
         return res;
     }
