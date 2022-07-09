@@ -10,6 +10,9 @@
  */
 class Solution {
     public ListNode sortList(ListNode head) {
+        if(head==null || head.next==null){
+            return head;
+        }
         ListNode curr=head;
         Queue<Integer> q=new PriorityQueue<>();
         while(curr!=null){
