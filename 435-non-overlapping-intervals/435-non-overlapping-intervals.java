@@ -8,8 +8,8 @@ class Solution {
             
             if(prev[1] > intervals[i][0]){
                 count++;
-                if(prev[1] > intervals[i][1]){
-                    prev=intervals[i];
+                 if(prev[1] > intervals[i][1]){
+                     prev=intervals[i];
                 }
             }
             else{
