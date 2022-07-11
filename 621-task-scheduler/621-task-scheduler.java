@@ -6,10 +6,10 @@ class Solution {
         }
         Arrays.sort(freq);
         int max_val = freq[25]-1;
-        int  idle = max_val*n;
+        int  idle_slot = max_val*n;
         for(int i=24;i>=0;i--){
-            idle-= Math.min(max_val,freq[i]);
+            idle_slot-= Math.min(max_val,freq[i]);
         }
-        return idle>0 ? idle+tasks.length : tasks.length;
+        return idle_slot>0 ? idle_slot+tasks.length : tasks.length;
     }
-} 
+}  
