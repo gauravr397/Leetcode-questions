@@ -1,21 +1,21 @@
 class Solution {
     public int maximumUnits(int[][] boxTypes, int truckSize) {
-        Arrays.sort(boxTypes, (a,b) -> b[1] - a[1]);
-        int maxbox=0;
-        for(int[] i : boxTypes){
-            int noofbox=i[0];
-            int noofunit=i[1];
+        Arrays.sort(boxTypes, (a,b) -> b[1]-a[1]);
+        int max_box=0;
+        for(int[] i:boxTypes){
+            int no_of_box=i[0];
+            int no_of_units=i[1];
             
-            if(truckSize>=noofbox){
-                maxbox+=noofbox*noofunit;
-                truckSize-=noofbox;
+            if(truckSize >= no_of_box){
+                max_box += no_of_box*no_of_units;
+                truckSize -= no_of_box;
             }
             else{
-                maxbox+=truckSize*noofunit;
-                return maxbox;
+                max_box += truckSize*no_of_units;
+                return max_box;
             }
+            
         }
-        return maxbox;
-        
+        return max_box;
     }
 }
