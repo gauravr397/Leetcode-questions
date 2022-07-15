@@ -9,6 +9,8 @@ class MyHashMap {
     }
     
     public int get(int key) {
+        if(hash[key]==-1)
+            return -1;
         return hash[key];
     }
     
