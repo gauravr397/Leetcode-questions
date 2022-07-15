@@ -1,5 +1,5 @@
 class MyHashMap {
-    int hash[] = new int[1010001];
+    int hash[] = new int[1000001];
     public MyHashMap() {
         Arrays.fill(hash,-1);
     }
