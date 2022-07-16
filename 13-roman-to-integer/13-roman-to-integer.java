@@ -1,20 +1,23 @@
 class Solution {
     public int romanToInt(String s) {
-        int sum=0;
-        int roman[] = new int[131];
-        roman['I']=1;
-        roman['V']=5;
-        roman['X']=10;
-        roman['L']=50;
-        roman['C']=100;
-        roman['D']=500;
-        roman['M']=1000;
+
+        Map<Character,Integer> roman = new HashMap();
+        roman.put('I',1);
+        roman.put('V',5);
+        roman.put('X',10);
+        roman.put('L',50);
+        roman.put('C',100);
+        roman.put('D',500);
+        roman.put('M',1000);
         
-        for(int i=0;i<s.length();i++){
-            if(i<s.length()-1 && roman[s.charAt(i)] < roman[s.charAt(i+1)])
-                sum+=roman[s.charAt(i+1)] - roman[s.charAt(i++)];
+        int sum = roman.get(s.charAt(s.length()-1));
+        
+        
+        for(int i=s.length()-2;i>=0;i--){
+            if(roman.get(s.charAt(i)) < roman.get(s.charAt(i+1)))
+                sum -= roman.get(s.charAt(i));
             else
-                sum+=roman[s.charAt(i)];
+                sum+=roman.get(s.charAt(i));
         }
         return sum;
  
