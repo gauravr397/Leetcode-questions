@@ -5,13 +5,9 @@ class Solution {
         int[] curr =intervals[0];
         list.add(curr);
         for(int[] i:intervals){
-            int fbegin = curr[0];
-            int fend = curr[1];
-            int ebegin = i[0];
-            int eend = i[1];
             
-            if(fend>=ebegin){
-                curr[1]=Math.max(fend,eend);
+            if(curr[1]>=i[0]){
+                curr[1]=Math.max(curr[1],i[1]);
             }
             else{
                 curr=i;
