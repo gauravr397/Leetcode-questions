@@ -4,7 +4,7 @@ class Solution {
         Map<Integer,Integer> map = new HashMap();
         map.put(0,1);
         for(int i:nums){
-            sum+=i;
+            sum+=i; // comulative array sum 1-3-6 
             if(map.containsKey(sum-k)){ //gin mil gya in map 
                 ans+=map.get(sum-k); // inc ans with freq
             }
