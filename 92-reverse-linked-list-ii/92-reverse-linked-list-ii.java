@@ -10,7 +10,7 @@
  */
 class Solution {
     public ListNode reverseBetween(ListNode head, int left, int right) {
-        //if(head.next==null)return head;
+        if(head==null)return null;
         
         ListNode curr =head,prev=null;
         while(left>1){
@@ -31,7 +31,8 @@ class Solution {
         }
         if(connect!=null){
             connect.next=prev;
-        }else{
+        }
+        else{
             head=prev;
         }
         tail.next=curr;
