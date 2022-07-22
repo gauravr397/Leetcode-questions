@@ -1,6 +1,6 @@
 class Solution {
     public int maxArea(int[] height) {
-      //Approach I time exceeds  
+      //Approach I Brute force -> Timelimit exceeds  
 //         int ans=0;
 //         int min=0;
         
