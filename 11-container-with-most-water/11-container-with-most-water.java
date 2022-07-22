@@ -20,7 +20,7 @@ class Solution {
         while(left<right){
             min = Math.min(height[left],height[right]);
             ans= Math.max(ans,min*(right-left));
-            
+                                     
             if(height[left]<height[right])
                 left++;
             else
