@@ -6,5 +6,6 @@ class Solution {
             reach = Math.max(reach,i+nums[i]);
         }
         return i==nums.length;
+       
     }
 }
