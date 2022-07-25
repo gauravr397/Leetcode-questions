@@ -11,6 +11,7 @@
  */
 public class Solution {
     public boolean hasCycle(ListNode head) {
+        //Approach I
         // ListNode slow=head,fast=head;
         // while(fast !=null &&fast.next!=null){
         //     slow=slow.next;
@@ -21,7 +22,7 @@ public class Solution {
         // }
         // return false;
         
-        
+        //Approach II
         Set<ListNode> set = new HashSet();
         
         while(head!=null){
