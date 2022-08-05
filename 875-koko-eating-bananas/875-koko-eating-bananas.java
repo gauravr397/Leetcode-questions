@@ -19,6 +19,6 @@ class Solution {
                 l=k+1;
             }
         }
-        return l;
+        return r;// or u can also return l;
     }
 }
