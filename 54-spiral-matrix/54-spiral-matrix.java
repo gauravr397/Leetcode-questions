@@ -11,7 +11,7 @@ class Solution {
             
             //move rigth
             for(int i=startCol;i<=endCol;i++){
-                res.add(matrix[startCol][i]);
+                res.add(matrix[startRow][i]);
             }
             startRow++;
             
