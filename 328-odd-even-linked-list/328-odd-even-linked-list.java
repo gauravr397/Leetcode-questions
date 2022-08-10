@@ -11,14 +11,15 @@
 class Solution {
     public ListNode oddEvenList(ListNode head) {
         if(head==null || head.next==null)return head;
-        ListNode oddh=head,evenh=head.next,evenlist=evenh;
-        while(evenh!=null && evenh.next!=null){
-            oddh.next=evenh.next;
-            oddh=oddh.next;
-            evenh.next=oddh.next;
-            evenh=evenh.next; 
+        ListNode odd = head,even=head.next,evenLL=even;
+        while(even!=null && even.next!=null){
+            odd.next=even.next;
+            odd=odd.next;
+            even.next=odd.next;
+            even=even.next;
+            
         }
-        oddh.next = evenlist;
+        odd.next=evenLL;
         return head;
     }
 }
