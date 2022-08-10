@@ -10,19 +10,16 @@
  */
 class Solution {
     public ListNode sortList(ListNode head) {
-        if(head==null || head.next==null){
-            return head;
+        Queue<Integer> pq = new PriorityQueue();
+        ListNode l = head;
+        while(l!=null){
+            pq.add(l.val);
+            l=l.next;
         }
-        ListNode curr=head;
-        Queue<Integer> q=new PriorityQueue<>();
-        while(curr!=null){
-            q.add(curr.val);
-            curr=curr.next;
-        }
-        curr=head;
-        while(curr!=null && !q.isEmpty()){
-            curr.val=q.poll();
-            curr= curr.next;  
+        l=head;
+        while(l!=null &&!pq.isEmpty()){
+            l.val=pq.poll();
+            l=l.next;
         }
         return head;
     }
