@@ -62,8 +62,10 @@ class Solution {
       final int i = word.charAt(0) - 'a';
       final int j = word.charAt(1) - 'a';
       if (count[j][i] > 0) {
-        ans += 4;
+        ans += 4; 
+        //System.out.println(Arrays.deepToString(count));
         --count[j][i];
+         
       } else {
         ++count[i][j];
       }
