@@ -29,7 +29,8 @@ class Solution {
             return;
            
         recurring(root.left,k);  
-        if(++count == k){
+        count++;
+        if(count == k){
             out=root.val;
             return;
             
