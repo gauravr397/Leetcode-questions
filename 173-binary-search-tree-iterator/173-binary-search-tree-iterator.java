@@ -28,7 +28,7 @@ class BSTIterator {
     public boolean hasNext() {
         return !stack.isEmpty();
     }
-    private Deque<TreeNode> stack = new ArrayDeque();
+    private Stack<TreeNode> stack = new Stack();
     public void PushLeftUntilNull(TreeNode root){
         while(root!=null){
             stack.push(root);
