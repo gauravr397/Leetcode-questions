@@ -25,18 +25,16 @@ class Solution {
     }
     
     public void recurring(TreeNode root,int k){
-        if(root.left!=null){
-            recurring(root.left,k);
-            
-        }
-        count++;
-        if(count == k){
+        if(root==null)
+            return;
+           
+        recurring(root.left,k);  
+        if(++count == k){
             out=root.val;
             return;
             
         }
-        if(root.right!=null){
-            recurring(root.right,k);
-        }
+        recurring(root.right,k);
+        
     }
 }
