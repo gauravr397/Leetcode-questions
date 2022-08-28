@@ -10,9 +10,9 @@ class Solution {
         for(int i=n-1;i>=0;i--){
             for(int j=m-1;j>=0;j--){
                 int product=(num1.charAt(i)-'0') * (num2.charAt(j)-'0');
-                product+=res[i+j+1]; // summ all last value in arr
-                res[i+j+1]=product%10; //take last digit of product
-                res[i+j]+=product/10; // add carry
+                product+=res[i+j+1]; // add carry in new product
+                res[i+j+1]=product%10; //take last digit of new product
+                res[i+j]+=product/10; // put carry on new second last arrd
             }
         }
         StringBuilder sb= new StringBuilder();
