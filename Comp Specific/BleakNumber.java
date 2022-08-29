@@ -16,12 +16,7 @@ public class BleakNumber {
             for (int j = 1; j < arr[i]; j++) {
                 if (j + Integer.bitCount(j) == arr[i]) {
                     arr2[i] = "SUPPORTED";
-                    // System.out.println(Arrays.toString(arr2));
                 }
-                // else{
-                // arr2[i]="BLEAK";
-                // //System.out.println(Arrays.toString(arr2));
-                // }
             }
         }
         System.out.println(Arrays.toString(arr2));
