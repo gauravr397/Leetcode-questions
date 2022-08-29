@@ -4,7 +4,7 @@ public class FindMeOut {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int res = 0;
+        int res = -1;
         int n = sc.nextInt();
         for (int i = n + 1; i < 1000; i++) {
             if (getsum(i) == n && i % n == 0) {
