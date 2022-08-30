@@ -6,13 +6,12 @@ public class MinSteps {
 
         int x = sc.nextInt();
         int y = sc.nextInt();
-        // int a = 1, b = 1;
         int count = 0;
         System.out.println(solve(x, y, count));
     }
 
     public static int solve(int x, int y, int count) {
-        // int count = 0;
+
         if (x == 1 && y == 1) {
             return count;
         }
