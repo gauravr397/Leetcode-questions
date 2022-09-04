@@ -14,5 +14,19 @@
 import java.util.*;
 
 public class Secretcode {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        long n = sc.nextLong();
+        long ans = 0;
+        long p = 1;
 
+        while (n > 0) {
+            long r = n % 10;
+            r = r % 2 == 0 ? r + 1 : r - 1;
+            ans += r * p;
+            p *= 10;
+            n /= 10;
+        }
+        System.out.println(ans);
+    }
 }
