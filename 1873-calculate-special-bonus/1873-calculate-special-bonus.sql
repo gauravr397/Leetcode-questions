@@ -1,5 +1,5 @@
 # Write your MySQL query statement below
-Select employee_id,Case when employee_id % 2 !=0 && name Not like 'M%' Then salary
-Else 0 End As bonus
-from Employees
-Order by employee_id
+SELECT employee_id,CASE WHEN employee_id % 2 <>0 AND name NOT LIKE 'M%' THEN salary
+ELSE 0 END AS bonus
+FROM Employees
+ORDER BY employee_id
