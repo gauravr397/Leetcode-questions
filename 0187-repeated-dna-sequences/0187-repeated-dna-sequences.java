@@ -7,7 +7,7 @@ class Solution {
       String seq = s.substring(i, i + 10);
       if (seen.contains(seq))
         ans.add(seq);
-        seen.add(seq);
+    seen.add(seq);
     }
 
     return new ArrayList<>(ans);
